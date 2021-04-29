@@ -4,9 +4,17 @@ const port = 3000
 
 let c = 0
 
+let text = "\n"
+
+setInterval(()=>{
+
+    text += `${new Date()} \n`
+}, 1000 * 60)
+
+
 app.get('/', (req, res) => {
   c++
-  res.send('Hello World: ' + c)
+  res.send('Hello World: ' + c + text)
 })
 
 app.listen(port, () => {
