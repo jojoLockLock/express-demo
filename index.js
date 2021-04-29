@@ -9,7 +9,7 @@ let text = "\n"
 setInterval(()=>{
 
     text += `${new Date()} \n`
-}, 1000 * 60)
+}, 1000)
 
 
 app.get('/', (req, res) => {
